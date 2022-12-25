@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/x-icon" href="./img/favicon.ico">
+    <title>Todo List</title>
+</head>
+
+<body>
+    <div class="content">
+        <div class="sidebar">
+            <h1>Todo</h1>
+            <ul>
+                <li class="all-tasks" id="99999">
+                    <img src="./img/tasks.svg">
+                    <p>All tasks</p>
+                </li>
+                <li class="today" id="88888">
+                    <img src="./img/today.svg">
+                    <p>Today</p>
+                </li>
+                <li class="this-week" id="77777">
+                    <img src="./img/week.svg">
+                    <p>This week</p>
+                </li>
+            </ul>
+            <h2>Projects</h2>
+            <ul class="projects">
+
+            </ul>
+            <form id="form" autocomplete="off" action="">
+                <button type="submit" class="create">+</button>
+                <input type="text" class="projectInput" maxlength="30" placeholder="Enter new project">
+            </form>
+        </div>
+
+        <div class="tasks">
+            <ul class="task-list">
+
+            </ul>
+            <form id="form-task" autocomplete="off" action="">
+                <button type="submit" class="btn-task">+</button>
+                <input type="text" class="newTask" placeholder="New Task">
+                <input type="date" class="newDate" required>
+            </form>
+        </div>
+
+        <footer>
+            <p>Made by
+                <a href="https://github.com/BrokenDetector">BrokenDetector</a>
+            </p>
+            <img src="./img/GitHubLogo.png">
+        </footer>
+    </div>
+    <script src="main.js"></script>
+</body>
+
+</html>
