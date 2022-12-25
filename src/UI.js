@@ -44,16 +44,14 @@ class UI {
                 UI.createNewTask()
             })
 
-            //console.log(lists)
             UI.renderTasks(lists);
         };
     };
 
-    // Render projects(lists)
+    // Render projects
     static renderProjects() {
         const projects = document.querySelector('.projects');
         let i = 0;
-        //console.log(Storage.getProjects())
         Storage.getProjects().forEach(e => {
             i++;
             const project = document.createElement('div');
@@ -82,7 +80,7 @@ class UI {
         })
     }
 
-    // Render tasks from storage for selected projects
+    // Render tasks from storage for selected project
     static renderTasks(selectedList) {
         if (selectedList == undefined) return
         selectedList.tasks.forEach(task => {
@@ -229,11 +227,9 @@ class UI {
 
             if (selectedId == null || selectedId == 'null') {
                 let AllTasks;
-                console.log(lists)
                 lists.forEach(list => {
                     AllTasks = list.tasks;
                     list.tasks = AllTasks.filter(task => task.id != e.target.parentElement.id);
-                    //console.log(list.tasks)
                 })
 
                 Storage.saveProjects(lists);
